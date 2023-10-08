@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import "./styled.css";
 
 interface TypingTextProps {
   text: string[] | string;
@@ -48,12 +47,28 @@ export const TypingText = ({ text }: TypingTextProps) => {
     };
   }, [currentIndex, currentText, isTyping, text]);
 
+  const blinkStyle = {
+    animation: "blink 1s step-end infinite",
+    fontSize: "20px",
+  };
+
   return (
-    <div className="box">
+    <div className="box" style={{ lineHeight: "30px", whiteSpace: "pre-line" }}>
       <span className="text" ref={textRef}>
         {currentText}
       </span>
-      <span className="blink">|</span>
+      <span className="blink" style={blinkStyle}>
+        |
+      </span>
+      <style>
+        {`
+          @keyframes blink {
+            50% {
+              opacity: 0;
+            }
+          }
+        `}
+      </style>
     </div>
   );
 };
