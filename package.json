@@ -1,7 +1,7 @@
 {
   "name": "typing-text-animation",
   "description": "This component provides a simple text typing animation feature",
-  "version": "0.0.14",
+  "version": "0.0.16",
   "keywords": [
     "react",
     "component",
@@ -12,6 +12,7 @@
   "license": "MIT",
   "private": false,
   "main": "dist/index.js",
+  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "browser": "./browser/specific/main.js",
   "repository": {
