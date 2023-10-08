@@ -21,3 +21,7 @@ render(
   </div>
 );
 ```
+
+## Example
+
+![example](https://github.com/thsuekfk2/typing-text-animation/assets/76821963/68b199fe-14ac-4f29-845e-e9e5111cb56c)
