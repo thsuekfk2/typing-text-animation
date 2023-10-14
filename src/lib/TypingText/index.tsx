@@ -1,11 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface TypingTextProps {
   text: string[] | string;
 }
 
 export const TypingText = ({ text }: TypingTextProps) => {
-  const textRef = useRef<HTMLDivElement | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
@@ -54,9 +53,7 @@ export const TypingText = ({ text }: TypingTextProps) => {
 
   return (
     <div className="box" style={{ lineHeight: "30px", whiteSpace: "pre-line" }}>
-      <span className="text" ref={textRef}>
-        {currentText}
-      </span>
+      <span className="text">{currentText}</span>
       <span className="blink" style={blinkStyle}>
         |
       </span>
